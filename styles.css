@@ -11,7 +11,9 @@
   --color-background-primary: #1992d4;
   --color-background-body: #e2e8f0;
   --color-background-header: #fff;
+  --color-background-card: #fff;
   --color-font-primary: #fff;
+  --color-accent: #f0b429;
   --padding-typical: 20px;
 }
 
@@ -83,16 +85,52 @@ nav {
 main {
   grid-area: main;
   display: grid;
+  padding: var(--padding-typical);
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
     / 3fr 1fr;
+  gap: var(--padding-typical);
   background-color: var(--color-background-body);
+}
+
+main h2 {
+  padding-bottom: var(--padding-typical);
 }
 
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--padding-typical);
+  list-style: none;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  padding: var(--padding-typical);
+  height: 250px;
+  border-left: 8px solid var(--color-accent);
+  border-radius: 8px;
+  background-color: var(--color-background-card);
+}
+
+.card h3 {
+  padding: 10px 0;
+}
+
+.card-button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  align-items: center;
+  list-style: none;
+}
+
+.card-button {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-background-primary);
 }
 
 .projects {
