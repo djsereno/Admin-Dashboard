@@ -119,6 +119,10 @@ main h2 {
   padding: 10px 0;
 }
 
+.card p {
+  overflow: hidden;
+}
+
 .card-button-container {
   display: flex;
   gap: 10px;
