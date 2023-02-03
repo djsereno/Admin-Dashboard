@@ -1,20 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
-}
-
 :root {
   --color-background-primary: #1992d4;
   --color-background-body: #e2e8f0;
   --color-background-header: #fff;
   --color-background-card: #fff;
-  --color-font-primary: #fff;
+  --color-font-light: #fff;
+  --color-font-primary: #000;
+  --color-font-secondary: #636363;
+  --color-divider: #d2d2d2;
   --color-accent: #f0b429;
   --padding-typical: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--color-font-primary);
 }
 
 body {
@@ -50,7 +54,7 @@ header {
   border: none;
   border-radius: 1000px;
   background-color: var(--color-background-primary);
-  color: var(--color-font-primary);
+  color: var(--color-font-light);
   font-weight: bold;
 }
 
@@ -61,7 +65,10 @@ nav {
   padding: var(--padding-typical);
   gap: 60px;
   background-color: var(--color-background-primary);
-  color: var(--color-font-primary);
+}
+
+nav * {
+  color: var(--color-font-light);
 }
 
 .brand {
@@ -77,7 +84,6 @@ nav {
 
 .nav-link:is(:link, :active, :hover, :visited) {
   text-decoration: none;
-  color: var(--color-font-primary);
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -98,7 +104,11 @@ main h2 {
   padding-bottom: var(--padding-typical);
 }
 
-.cards-container {
+.projects {
+  grid-area: projects;
+}
+
+.projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--padding-typical);
@@ -106,24 +116,32 @@ main h2 {
 }
 
 .card {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
   padding: var(--padding-typical);
-  height: 250px;
-  border-left: 8px solid var(--color-accent);
   border-radius: 8px;
   background-color: var(--color-background-card);
-}
-
-.card h3 {
-  padding: 10px 0;
+  list-style: none;
 }
 
 .card p {
+  color: var(--color-font-secondary);
+}
+
+.project {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  height: 250px;
+  border-left: 8px solid var(--color-accent);
+}
+
+.project h3 {
+  padding: 10px 0;
+}
+
+.project p {
   overflow: hidden;
 }
 
-.card-button-container {
+.project .button-container {
   display: flex;
   gap: 10px;
   justify-content: end;
@@ -131,14 +149,29 @@ main h2 {
   list-style: none;
 }
 
-.card-button {
+.project .button-container .button {
   width: 40px;
   height: 40px;
   background-color: var(--color-background-primary);
 }
 
-.projects {
-  grid-area: projects;
+.announcements {
+  display: grid;
+  padding: 0 var(--padding-typical);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.announcements li {
+  padding: var(--padding-typical) 0;
+}
+
+.announcements li:not(:first-child) {
+  border-top: 1px solid var(--color-divider);
+}
+
+.announcement p {
+  padding-top: 5px;
+  font-size: 0.9rem;
 }
 
 footer {
