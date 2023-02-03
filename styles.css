@@ -12,6 +12,7 @@
   --color-background-body: #e2e8f0;
   --color-background-header: #fff;
   --color-font-primary: #fff;
+  --padding-typical: 20px;
 }
 
 body {
@@ -21,21 +22,41 @@ body {
     "sidebar main" 1fr
     "footer footer" min-content /
     1fr 3fr;
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 header {
   grid-area: header;
+  display: grid;
+  align-items: center;
+  grid: min-content min-content / 1fr min-content;
+  padding: var(--padding-typical);
   background-color: var(--color-background-header);
 }
 
+.button-container {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--padding-typical);
+}
 
+.button-container button {
+  padding: 12px 0;
+  width: 100px;
+  border: none;
+  border-radius: 1000px;
+  background-color: var(--color-background-primary);
+  color: var(--color-font-primary);
+  font-weight: bold;
+}
 
 nav {
   grid-area: sidebar;
   display: grid;
   grid-auto-rows: min-content;
-  padding: 25px;
+  padding: var(--padding-typical);
   gap: 60px;
   background-color: var(--color-background-primary);
   color: var(--color-font-primary);
