@@ -153,6 +153,7 @@ nav * {
   display: flex;
   align-items: center;
   gap: var(--padding-typical);
+  text-decoration: none;
 }
 
 .brand-icon {
@@ -358,6 +359,11 @@ main h2 {
 .trend .icon {
   grid-row: 1 / 3;
   margin-right: var(--padding-typical);
+}
+
+.trend .username {
+  color: var(--color-font-primary);
+  font-weight: bold;
 }
 
 footer {
