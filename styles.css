@@ -45,15 +45,14 @@ header {
 
 .icon {
   border-radius: 50%;
-  background-color: var(--color-background-primary);
 }
 .icon.user {
   width: 60px;
   height: 60px;
 }
 .icon.user-main {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
 }
 .icon.symbol {
   height: 30px;
