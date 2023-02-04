@@ -84,6 +84,22 @@ header {
   gap: var(--padding-typical);
 }
 
+.greeting-container {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: var(--padding-typical);
+  place-items: center left;
+}
+
+.greeting-container h1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting-container .greeting {
+  font-size: 0.5em;
+}
+
 .button-container {
   list-style: none;
   display: grid;
