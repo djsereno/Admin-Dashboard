@@ -45,7 +45,7 @@ header {
   align-items: center;
   grid: min-content min-content / 1fr min-content;
   gap: var(--padding-typical);
-  padding: var(--padding-typical);
+  padding: var(--padding-typical) 60px;
   background-color: var(--color-background-header);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -71,6 +71,10 @@ header {
 
 header i {
   font-size: 1.4em;
+}
+
+header a {
+  text-decoration: none;
 }
 
 .search-container input[type="search"] {
@@ -124,6 +128,11 @@ header i {
   background-color: var(--color-background-primary);
   color: var(--color-font-light);
   font-weight: bold;
+}
+
+.button-container button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
 }
 
 nav {
@@ -373,6 +382,11 @@ footer * {
 
 footer i {
   font-size: 1.1rem;
+}
+
+.notifications {
+  background-color: transparent;
+  border: none;
 }
 
 .notifications:hover * {
