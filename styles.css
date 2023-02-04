@@ -220,10 +220,24 @@ main h2 {
 }
 
 .project {
+  position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   height: 250px;
   border-left: 8px solid var(--color-accent);
+}
+
+.project .hover-flag {
+  position: absolute;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background-color: var(--color-accent);
+  transition: all 0.2s;
+}
+
+.project:hover .hover-flag {
+  width: 8px;
 }
 
 .project h3 {
