@@ -257,8 +257,9 @@ main h2 {
   width: 8px;
 }
 
-.project h3 {
+.project a {
   padding: 10px 0;
+  text-decoration: none;
 }
 
 .project p {
@@ -279,6 +280,8 @@ main h2 {
   place-items: center;
   height: 1.3em;
   width: 1.3em;
+  background-color: transparent;
+  border: none;
   border-radius: 50%;
   font-size: 1.5em;
   transition: all 0.05s;
