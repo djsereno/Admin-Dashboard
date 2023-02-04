@@ -5,13 +5,18 @@
   --color-background-body: #e2e8f0;
   --color-background-header: #fff;
   --color-background-card: #fff;
+
   --color-font-light: #fff;
   --color-font-primary: #000;
   --color-font-secondary: #636363;
+
   --color-divider: #d2d2d2;
   --color-accent: #f0b429;
+
+  --color-notifications-active: #de414e;
   --color-favorite-active: #f0b429;
   --color-watch-active: #564ad6;
+
   --padding-typical: 20px;
 }
 
@@ -370,18 +375,45 @@ footer i {
   font-size: 1.1rem;
 }
 
+.notifications:hover * {
+  color: var(--color-background-primary) !important;
+  cursor: pointer;
+}
 
+.notifications.active {
+  animation: shake 3s;
+  animation-iteration-count: infinite;
+  color: var(--color-notifications-active);
+}
 
-.notifications:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
-  color: var(--color-background-primary);
+.fa-solid.fa-bell {
+  color: var(--color-notifications-active);
+}
+
+.notifications.active .fa-regular.fa-bell {
+  display: none;
+}
+
+.notifications:not(.active) .fa-solid.fa-bell {
+  display: none;
 }
 
 @keyframes shake {
-  0%, 100% { transform: rotate(0deg);}
-  20%  { transform: rotate(-15deg);}
-  35%  { transform: rotate(15deg);}
-  50%  { transform: rotate(-15deg);}
-  70%  { transform: rotate(15deg);}
+  0%,
+  20%,
+  100% {
+    transform: rotate(0deg);
+  }
+  4% {
+    transform: rotate(-15deg);
+  }
+  7% {
+    transform: rotate(15deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  14% {
+    transform: rotate(15deg);
+  }
 }
