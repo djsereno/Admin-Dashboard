@@ -33,12 +33,14 @@ body {
 
 header {
   grid-area: header;
+  z-index: 1;
   display: grid;
   align-items: center;
   grid: min-content min-content / 1fr min-content;
   gap: var(--padding-typical);
   padding: var(--padding-typical);
   background-color: var(--color-background-header);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .icon {
@@ -62,7 +64,11 @@ header {
   display: grid;
   grid-template-columns: min-content 1fr;
   place-items: center left;
-  column-gap: var(--padding-typical);
+  column-gap: 10px;
+}
+
+header i {
+  font-size: 1.4em;
 }
 
 .search-container input[type="search"] {
@@ -192,6 +198,7 @@ main h2 {
   border-radius: 8px;
   background-color: var(--color-background-card);
   list-style: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card p {
@@ -233,10 +240,23 @@ main h2 {
 }
 
 .project .button-container .button {
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-background-primary);
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 1.3em;
+  width: 1.3em;
   border-radius: 50%;
+  font-size: 1.5em;
+}
+
+.fa-circle-plus {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 0.5em;
+  text-align: center;
 }
 
 .announcements {
