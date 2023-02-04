@@ -54,10 +54,6 @@ header {
   width: 100px;
   height: 100px;
 }
-.icon.symbol {
-  height: 30px;
-  width: 30px;
-}
 
 .search-container {
   display: grid;
@@ -158,13 +154,19 @@ nav * {
   gap: 20px;
 }
 
-.nav-link:is(:link, :active, :hover, :visited) {
+.nav-link:link {
   display: flex;
   gap: var(--padding-typical);
   align-items: center;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3rem;
+  transition: all 0.1s;
+  transform-origin: center left;
+}
+
+.nav-link:is(:active, :hover, :visited) {
+  transform: scale(1.08);
 }
 
 .nav-link .icon {
@@ -248,6 +250,11 @@ main h2 {
   font-size: 1.5em;
 }
 
+.project .button-container .button:hover > * {
+  color: var(--color-background-primary);
+  cursor: pointer;
+}
+
 .fa-circle-plus {
   position: absolute;
   right: 0;
@@ -256,6 +263,10 @@ main h2 {
   border-radius: 50%;
   font-size: 0.5em;
   text-align: center;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .announcements {
