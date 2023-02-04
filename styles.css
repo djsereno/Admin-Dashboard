@@ -26,14 +26,14 @@ body {
   grid:
     "sidebar header" min-content
     "sidebar main" 1fr
-    "footer footer" min-content
-    / 1fr 3fr;
-  min-height: 100vh;
+    "footer main" min-content
+    / 1fr 4fr;
+  height: 100vh;
 }
 
 header {
-  grid-area: header;
   z-index: 1;
+  grid-area: header;
   display: grid;
   align-items: center;
   grid: min-content min-content / 1fr min-content;
@@ -47,8 +47,8 @@ header {
   border-radius: 50%;
 }
 .icon.user {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 .icon.user-main {
   width: 100px;
@@ -120,6 +120,7 @@ header i {
 }
 
 nav {
+  z-index: 1;
   grid-area: sidebar;
   display: grid;
   grid-auto-rows: min-content;
@@ -188,6 +189,7 @@ main {
     / 3fr 1fr;
   gap: var(--padding-typical);
   background-color: var(--color-background-body);
+  overflow-y: scroll;
 }
 
 main h2 {
@@ -330,5 +332,24 @@ main h2 {
 
 footer {
   grid-area: footer;
-  background-color: #333;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  place-items: center;
+  background-color: var(--color-background-primary);
+  font-size: 0.8rem;
+}
+
+footer * {
+  color: var(--color-font-light);
+}
+
+.contact-info {
+  display: flex;
+  place-items: center;
+  gap: 6px;
+}
+
+footer i {
+  font-size: 1.1rem;
 }
