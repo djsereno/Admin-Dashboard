@@ -133,7 +133,13 @@ nav * {
 
 .brand {
   display: flex;
+  align-items: center;
   gap: var(--padding-typical);
+}
+
+.brand-icon {
+  height: 3em;
+  filter: brightness(0) invert();
 }
 
 .brand-text {
