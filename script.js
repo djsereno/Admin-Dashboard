@@ -1,4 +1,4 @@
-const notificationBell = document.querySelector(".notifications");
+const notificationBell = document.querySelector(".notification-icon");
 const favoriteButtons = document.querySelectorAll(".card-button.favorite");
 const watchButtons = document.querySelectorAll(".card-button.watch");
 
