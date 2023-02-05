@@ -16,7 +16,7 @@
   --color-button-hover: #489fb5;
   --color-notifications-active: #de414e;
   --color-favorite-active: #f0b429;
-  --color-watch-active: #564ad6;
+  --color-watch-active: #5d54c0;
 
   --padding-typical: 20px;
 }
@@ -25,8 +25,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
   color: var(--color-font-primary);
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
@@ -42,11 +42,11 @@ body {
 header {
   z-index: 1;
   grid-area: header;
-  display: grid;
-  align-items: center;
-  grid: min-content min-content / 1fr min-content;
-  gap: var(--padding-typical);
   padding: var(--padding-typical) 60px;
+  display: grid;
+  grid: min-content min-content / 1fr min-content;
+  align-items: center;
+  gap: var(--padding-typical);
   background-color: var(--color-background-header);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -55,12 +55,12 @@ header {
   border-radius: 50%;
 }
 .icon.user {
-  width: 50px;
   height: 50px;
+  width: 50px;
 }
 .icon.user-main {
-  width: 100px;
   height: 100px;
+  width: 100px;
 }
 
 .search-container {
@@ -81,9 +81,9 @@ header a {
 .search-container input[type="search"] {
   padding: 0.5em 1em;
   width: min(800px, 100%);
-  background-color: var(--color-background-body);
   border: none;
   border-radius: 1000px;
+  background-color: var(--color-background-body);
 }
 
 .search-container input[type="search"]:is(:focus, :active) {
@@ -114,11 +114,11 @@ header a {
 }
 
 .button-container {
-  list-style: none;
   display: grid;
-  place-items: center;
   grid-template-columns: repeat(3, 1fr);
+  place-items: center;
   gap: var(--padding-typical);
+  list-style: none;
 }
 
 .button-container button {
@@ -132,16 +132,16 @@ header a {
 }
 
 .button-container button:hover {
-  cursor: pointer;
   background-color: var(--color-button-hover);
+  cursor: pointer;
 }
 
 nav {
   z-index: 1;
   grid-area: sidebar;
+  padding: var(--padding-typical);
   display: grid;
   grid-auto-rows: min-content;
-  padding: var(--padding-typical);
   gap: 60px;
   background-color: var(--color-background-primary);
 }
@@ -167,10 +167,10 @@ nav * {
 }
 
 .nav-container {
-  list-style: none;
   display: grid;
   grid-auto-rows: min-content;
   gap: 20px;
+  list-style: none;
 }
 
 .nav-link:link {
@@ -188,19 +188,10 @@ nav * {
   transform: scale(1.08);
 }
 
-.nav-link .icon {
-  display: inline-block;
-  background-color: var(--color-font-light);
-}
-
-.nav-link p {
-  display: inline-block;
-}
-
 main {
   grid-area: main;
-  display: grid;
   padding: var(--padding-typical);
+  display: grid;
   grid:
     "projects announcements" 1fr
     "projects trending" 1fr
@@ -217,9 +208,9 @@ main h2 {
 .card {
   padding: var(--padding-typical);
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: var(--color-background-card);
   list-style: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card p {
@@ -231,9 +222,8 @@ main h2 {
 }
 
 .projects-container {
-  display: grid;
   padding-bottom: var(--padding-typical);
-
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--padding-typical);
   list-style: none;
@@ -250,8 +240,8 @@ main h2 {
 .project .hover-flag {
   position: absolute;
   left: 0;
-  width: 0px;
   height: 100%;
+  width: 0px;
   background-color: var(--color-accent);
   transition: all 0.2s;
 }
@@ -263,10 +253,6 @@ main h2 {
 .project a {
   padding: 10px 0;
   text-decoration: none;
-}
-
-.project p {
-  overflow: hidden;
 }
 
 .card-button-container {
@@ -283,15 +269,15 @@ main h2 {
   place-items: center;
   height: 1.3em;
   width: 1.3em;
-  background-color: transparent;
   border: none;
   border-radius: 50%;
+  background-color: transparent;
   font-size: 1.5em;
   transition: all 0.05s;
 }
 
 .card-button:hover > * {
-  color: var(--color-button-hover) !important;
+  color: var(--color-button-hover);
   cursor: pointer;
 }
 
@@ -310,32 +296,29 @@ main h2 {
   display: inline;
 }
 
-.fa-solid.fa-star,
+.fa-solid.fa-star {
+  display: none;
+  color: var(--color-favorite-active);
+}
+
 .fa-solid.fa-eye {
   display: none;
+  color: var(--color-watch-active);
 }
 
 .fa-circle-plus {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: white;
   border-radius: 50%;
+  background-color: white;
   font-size: 0.5em;
   text-align: center;
 }
 
-.fa-solid.fa-star {
-  color: var(--color-favorite-active);
-}
-
-.fa-solid.fa-eye {
-  color: var(--color-watch-active);
-}
-
 .announcements {
-  display: grid;
   padding: 0 var(--padding-typical);
+  display: grid;
   grid-template-rows: repeat(3, min-content);
 }
 
@@ -380,8 +363,8 @@ main h2 {
 
 footer {
   grid-area: footer;
-  display: flex;
   padding: 10px;
+  display: flex;
   flex-direction: column;
   place-items: center;
   background-color: var(--color-background-primary);
@@ -403,8 +386,8 @@ footer i {
 }
 
 .notifications {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }
 
 .notifications:hover * {
@@ -413,9 +396,8 @@ footer i {
 }
 
 .notifications.active {
-  animation: shake 3s;
-  animation-iteration-count: infinite;
   color: var(--color-notifications-active);
+  animation: shake 3s infinite;
 }
 
 .fa-solid.fa-bell {
