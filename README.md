@@ -27,6 +27,7 @@
 ## Contact
 
 Derek Sereno - [LinkedIn](https://www.linkedin.com/in/dereksereno/) - [Email](mailto:djsereno91@gmail.com)
+
 Project Link: [https://github.com/djsereno/Admin-Dashboard/](https://github.com/djsereno/Admin-Dashboard/)
 
 ## Acknowledgments
