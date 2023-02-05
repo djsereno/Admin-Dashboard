@@ -9,7 +9,7 @@
 <h3 align="center">Admin Dashboard</h3>
 
   <p align="center">
-    A sign-up form for a fictional subscription box service.
+    An admin dashboard web page.
     <br />
     <a href="https://djsereno.github.io/Admin-Dashboard/">Preview</a>
     ·
@@ -27,7 +27,6 @@
 ## Contact
 
 Derek Sereno - [LinkedIn](https://www.linkedin.com/in/dereksereno/) - [Email](mailto:djsereno91@gmail.com)
-
 Project Link: [https://github.com/djsereno/Admin-Dashboard/](https://github.com/djsereno/Admin-Dashboard/)
 
 ## Acknowledgments
