@@ -32,5 +32,5 @@ Project Link: [https://github.com/djsereno/Admin-Dashboard/](https://github.com/
 
 ## Acknowledgments
 
-- Favicon by [Freepik](https://freepik.com/)
+- User avatars by [Freepik](https://freepik.com/)
 - Favicon by [icons8](https://icons8.com/)
